@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Link for the bootstrap cdn-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!--Linking external CSS-->
+    <link rel="stylesheet" href="styles.css">
+    <!--Linking icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+  <div class="container-fluid d-flex justify-content-center align-items-center">
+    <div id="loginCard" class="card" style="display: block;">
+      <form class="align-middle">
+        <div class="d-flex justify-content-center">
+          <p class="h4">LOGIN</p>
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control" id="useid" placeholder="&#128386   Email">
+        </div>
+        <div class="mb-3">
+          <input type="password" class="form-control" id="password" placeholder="&#9679 &#9679 &#9679 &#9679 &#9679 &#9679 &#9679">
+        </div>
+        <div class="form-check mb-2 mr-sm-2">
+          <input class="form-check-input" type="checkbox" id="checkRemember">
+          <label class="form-check-label" for="checkRemember">Remember me</label>
+        </div>
+        <button type="submit" id="loginButton" class="btn btn-primary">LOGIN</button>
+        <div class="d-flex justify-content-center">
+          <p class="text-muted">Or Login with</p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="button" id="facebookLogin" class="btn btn-outline-secondary"><a href="#" class="fa fa-facebook"></a>Facebook</button>
+        <div style="width: 4%;"></div>
+          <button type="button" id="googleLogin" class="btn btn-outline-secondary"><a href="#" class="fa fa-google"></a>Google</button>
+        </div>
+        <div class="d-flex justify-content-center">
+          <p class="text-muted">Not a member?<button id="inLogin" onclick="toSignup()">Sign up now</button></p>
+        </div>
+      </form>
+    </div>
+    <div id="signupCard" class="card" style="display: none;">
+      <form class="align-middle">
+        <div class="d-flex justify-content-center">
+          <p class="h4">CREATE ACCOUNT</p>
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control" id="enterName" placeholder="Your Name">
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control" id="enterEmail" placeholder="&#128386   Your Email">
+        </div>
+        <div class="mb-3">
+          <input type="password" class="form-control" id="enterPassword" placeholder="Create Password">
+          <div id="passwordHelpBlock" class="form-text">
+            Your password must be 8-20 characters long, and must not contain spaces, special characters, or emoji.
+          </div>
+        </div>
+        <div class="mb-3">
+          <input type="password" class="form-control" id="repeatPassword" placeholder="Repeat your password">
+        </div>
+        <button type="submit" id="signupButton" class="btn btn-primary">SIGN UP</button>
+        <div class="d-flex justify-content-center">
+          <p class="text-muted">Already have an account?<button id="inSignup" onclick="toLogin()" style="border: 0px; background-color: white; text-decoration: underline;">Log in</button></p>
+        </div>
+      </form>
+    </div>
+    <div id="successCard" class="card" style="display: none;">
+      <div class="d-flex justify-content-center"><i class="material-icons">done</i></div>
+      <div class="d-flex justify-content-center">
+        <h4>Registered Successfully</h4>
+      </div>
+      <div class="d-flex justify-content-center">
+        <p class="text-muted">Redirecting to login in <span id="countDown">4</span> sec</p>
+      </div>
+    </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
